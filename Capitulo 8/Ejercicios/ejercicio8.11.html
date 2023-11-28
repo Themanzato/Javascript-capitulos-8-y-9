@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ejercicio 8.11</title>
+</head>
+<body>
+
+<h1>Ventas de Productos</h1>
+
+<script>
+  var precioProducto1 = 2.98;
+  var precioProducto2 = 4.50;
+  var precioProducto3 = 9.98;
+  var precioProducto4 = 4.49;
+  var precioProducto5 = 6.87;
+
+  var totalVentas = 0;
+
+  var continuar = true;
+
+  while (continuar) {
+    var numeroProducto = parseInt(prompt("Ingrese el número del producto (1-5) o -1 para terminar:"));
+
+    if (numeroProducto === -1) {
+      continuar = false;
+    } else if (numeroProducto >= 1 && numeroProducto <= 5) {
+      var cantidadVendida = parseInt(prompt("Ingrese la cantidad vendida del producto " + numeroProducto + ":"));
+
+      switch (numeroProducto) {
+        case 1:
+          totalVentas += precioProducto1 * cantidadVendida;
+          break;
+        case 2:
+          totalVentas += precioProducto2 * cantidadVendida;
+          break;
+        case 3:
+          totalVentas += precioProducto3 * cantidadVendida;
+          break;
+        case 4:
+          totalVentas += precioProducto4 * cantidadVendida;
+          break;
+        case 5:
+          totalVentas += precioProducto5 * cantidadVendida;
+          break;
+        default:
+          document.write("<p>Número de producto no válido.</p>");
+      }
+    } else {
+      document.write("<p>Número de producto no válido.</p>");
+    }
+  }
+
+  document.write("<p>Valor total de las ventas de la semana pasada: $" + totalVentas.toFixed(2) + "</p>");
+</script>
+
+</body>
+</html>

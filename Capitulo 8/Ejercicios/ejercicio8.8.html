@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8.8</title>
+  <style>
+    table {
+      width: 300px;
+      border-collapse: collapse;
+      background-color: lightblue;
+    }
+    table, td, th {
+      border: 1px solid black;
+      padding: 4px;
+    }
+    th {
+      text-align: left;
+      color: white;
+      background-color: darkblue;
+    }
+    tr.fila-impar {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Cálculo del interés compuesto</h1>
+
+<script>
+  var principal = 1000.00;
+
+  document.write("<table>");
+  document.write("<thead><tr><th>Año</th><th>Tasa de Interés</th><th>Monto en Depósito</th></tr></thead><tbody>");
+
+  for (var tasa = 5; tasa <= 10; tasa++) {
+    for (var anio = 1; anio <= 10; anio++) {
+      var monto = principal * Math.pow(1 + tasa / 100, anio);
+
+      if (anio % 2 !== 0) {
+        document.write("<tr class='fila-impar'><td>" + anio + "</td><td>" + tasa + "%</td><td>" + monto.toFixed(2) + "</td></tr>");
+      } else {
+        document.write("<tr><td>" + anio + "</td><td>" + tasa + "%</td><td>" + monto.toFixed(2) + "</td></tr>");
+      }
+    }
+  }
+
+  document.write("</tbody></table>");
+</script>
+
+</body>
+</html>

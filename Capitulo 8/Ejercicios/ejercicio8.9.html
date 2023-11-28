@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8.9</title>
+</head>
+<body>
+
+<h1>Gráfico de Asteriscos</h1>
+
+<script>
+  for (var i = 0; i < 5; i++) {
+    var numero = parseInt(prompt("Ingrese un número entre 1 y 30:"));
+
+    if (numero >= 1 && numero <= 30) {
+      var asteriscos = "*".repeat(numero);
+
+      document.write("<p>" + asteriscos + "</p>");
+    } else {
+      document.write("<p>El número ingresado no está en el rango permitido.</p>");
+      i--;
+    }
+  }
+</script>
+
+</body>
+</html>

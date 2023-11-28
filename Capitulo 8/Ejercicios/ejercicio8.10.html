@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ejercicio 8.10</title>
+</head>
+<body>
+
+<h1>Los Doce Días de Navidad</h1>
+
+<script>
+  for (var dia = 1; dia <= 12; dia++) {
+    document.write("<p>Día " + dia + ":</p>");
+    switch (dia) {
+      case 12:
+        document.write("<p>Doce tamborileros tamborileando,</p>");
+      case 11:
+        document.write("<p>Once señores bailando,</p>");
+      case 10:
+        document.write("<p>Diez señoras danzando,</p>");
+      case 9:
+        document.write("<p>Nueve damas bailando,</p>");
+      case 8:
+        document.write("<p>Ocho criadas ordeñando,</p>");
+      case 7:
+        document.write("<p>Siete cisnes nadando,</p>");
+      case 6:
+        document.write("<p>Seis gansos poniendo,</p>");
+      case 5:
+        document.write("<p>Cinco anillos de oro,</p>");
+      case 4:
+        document.write("<p>Cuatro pájaros que llaman,</p>");
+      case 3:
+        document.write("<p>Tres gallinas francesas,</p>");
+      case 2:
+        document.write("<p>Dos tórtolas,</p>");
+      case 1:
+        document.write("<p>Y un partridge en un peral.</p>");
+        break;
+      default:
+        document.write("<p>Error en el día.</p>");
+        break;
+    }
+  }
+</script>
+
+</body>
+</html>

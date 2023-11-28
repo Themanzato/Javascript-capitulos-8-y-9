@@ -1,0 +1,61 @@
+<!--
+Dado el siguiente switch:
+
+switch (k) {
+  case 1:
+    break;
+  case 2:
+  case 3:
+    ++k;
+    break;
+  case 4:
+    --k;
+    break;
+  default:
+    k *= 3;
+}
+x = k;
+
+¿Qué valores se asignan a x cuando k tiene valores de 1, 2. 3. 4 y 10?
+
+case 1:
+no hay instrucciones dentro del bloque.
+Se asigna el valor de k a x fuera del switch.
+x es 1.
+
+case 2:
+Se incrementa k en 1. y como no hay break, se salta al 3
+Se asigna el valor de k a x fuera del switch.
+x es 3.
+
+case 3:
+Se incrementa k en 1.
+Se asigna el valor de k a x.
+x es 4.
+
+case 4:
+Se decrementa k en 1.
+Se asigna el valor de k a x.
+x es 3.
+
+case 10:
+Ninguno de los casos coincide, por lo que se ejecuta el bloque default.
+Se multiplica k por 3.
+Se asigna el valor resultante de k a x.
+x es 30.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

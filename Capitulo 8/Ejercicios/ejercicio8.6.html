@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ejercicio 8.6</title>
+</head>
+<body>
+
+<h1>Encontrar el menor de varios enteros no negativos</h1>
+
+<script>
+  var numValores = parseInt(prompt("Ingrese la cantidad de números:"));
+  var menor = Infinity;
+
+  for (var i = 0; i < numValores; i++) {
+    var valor = parseInt(prompt("Ingrese el número " + (i + 1) + ":"));
+
+    if (valor >= 0 && valor < menor) {
+      menor = valor;
+    }
+  }
+
+  if (menor === Infinity) {
+    document.write("No se aceptan numeros negativos.");
+  } else {
+    document.write("El menor número ingresado es: " + menor);
+  }
+</script>
+
+</body>
+</html>
