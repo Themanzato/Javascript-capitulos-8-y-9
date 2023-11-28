@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.4</title>
+    <script>
+        // Función para calcular la distancia entre dos puntos
+        function distancia(x1, y1, x2, y2) {
+            // Usar la fórmula de la distancia euclidiana
+            var dx = x2 - x1; // Diferencia en el eje x
+            var dy = y2 - y1; // Diferencia en el eje y
+            var d = Math.sqrt(dx * dx + dy * dy); // Distancia
+            return d;
+        }
+
+        // Función para mostrar el resultado en el documento HTML
+        function mostrarResultado() {
+            // Obtener los valores de los elementos input con id "x1", "y1", "x2" y "y2"
+            var x1 = document.getElementById("x1").value;
+            var y1 = document.getElementById("y1").value;
+            var x2 = document.getElementById("x2").value;
+            var y2 = document.getElementById("y2").value;
+            // Validar que los valores sean números
+            if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
+                alert("Por favor, ingrese números válidos.");
+                return;
+            }
+            // Convertir los valores a números de punto flotante
+            x1 = parseFloat(x1);
+            y1 = parseFloat(y1);
+            x2 = parseFloat(x2);
+            y2 = parseFloat(y2);
+            // Calcular la distancia entre los puntos
+            var d = distancia(x1, y1, x2, y2);
+            // Crear un elemento p para mostrar el resultado
+            var p = document.createElement("p");
+            p.textContent = "La distancia entre los puntos (" + x1 + ", " + y1 + ") y (" + x2 + ", " + y2 + ") es: " + d.toFixed(2);
+            // Obtener el elemento div con id "resultado"
+            var resultado = document.getElementById("resultado");
+            // Limpiar el contenido del elemento div
+            resultado.innerHTML = "";
+            // Agregar el elemento p al elemento div
+            resultado.appendChild(p);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculadora de distancia entre dos puntos</h1>
+    <p>Ingrese las coordenadas de los puntos:</p>
+    <form>
+        <label for="x1">x1:</label>
+        <input type="text" id="x1">
+        <label for="y1">y1:</label>
+        <input type="text" id="y1">
+        <br>
+        <label for="x2">x2:</label>
+        <input type="text" id="x2">
+        <label for="y2">y2:</label>
+        <input type="text" id="y2">
+        <br>
+        <button type="button" onclick="mostrarResultado()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>

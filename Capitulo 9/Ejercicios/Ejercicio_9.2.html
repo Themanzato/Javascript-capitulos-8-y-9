@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.2</title>
+    <script>
+        // Esta función calcula el área de un círculo dado su radio
+        function areaCirculo(r) {
+            return Math.PI * r * r;
+        }
+
+        // Esta función obtiene el valor del radio del formulario y llama a la función areaCirculo
+        function calcularArea() {
+            // Obtenemos el elemento del formulario con el id "radio"
+            var radio = document.getElementById("radio");
+            // Obtenemos el valor del radio como un número
+            var r = Number(radio.value);
+            // Llamamos a la función areaCirculo con el valor del radio
+            var area = areaCirculo(r);
+            // Obtenemos el elemento del párrafo con el id "resultado"
+            var resultado = document.getElementById("resultado");
+            // Mostramos el resultado en el párrafo
+            resultado.innerHTML = "El área del círculo es " + area.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculadora de área de círculo</h1>
+    <form>
+        <label for="radio">Introduce el radio del círculo:</label>
+        <input type="number" id="radio" name="radio" min="0" required>
+        <button type="button" onclick="calcularArea()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>

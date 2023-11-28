@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.3</title>
+    <script>
+        // Función para calcular el cargo por cada cliente
+        function calcularCargos(horas) {
+            var cargo = 2; // Cuota mínima
+            if (horas > 3) { // Si excede las tres horas
+                cargo += 0.5 * Math.ceil(horas - 3); // Se cobra $0.5 por cada hora o fracción adicional
+            }
+            if (cargo > 10) { // Si el cargo supera el máximo de $10
+                cargo = 10; // Se aplica el cargo máximo
+            }
+            return cargo;
+        }
+
+        // Variable global para almacenar el total de los recibos
+        var total = 0;
+
+        // Función para mostrar el resultado en el documento HTML
+        function mostrarResultado() {
+            // Obtener el valor del elemento input con id "horas"
+            var horas = document.getElementById("horas").value;
+            // Validar que el valor sea un número positivo
+            if (isNaN(horas) || horas <= 0) {
+                alert("Por favor, ingrese un número válido de horas.");
+                return;
+            }
+            // Calcular el cargo por el cliente actual
+            var cargo = calcularCargos(horas);
+            // Actualizar el total de los recibos
+            total += cargo;
+            // Crear un elemento p para mostrar el cargo del cliente actual
+            var p1 = document.createElement("p");
+            p1.textContent = "El cargo por el cliente actual es: $" + cargo.toFixed(2);
+            // Crear un elemento p para mostrar el total de los recibos
+            var p2 = document.createElement("p");
+            p2.textContent = "El total de los recibos de ayer es: $" + total.toFixed(2);
+            // Obtener el elemento div con id "resultado"
+            var resultado = document.getElementById("resultado");
+            // Limpiar el contenido del elemento div
+            resultado.innerHTML = "";
+            // Agregar los elementos p al elemento div
+            resultado.appendChild(p1);
+            resultado.appendChild(p2);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculadora de cargos de estacionamiento</h1>
+    <p>Ingrese las horas que se estacionó cada cliente:</p>
+    <input type="text" id="horas">
+    <button onclick="mostrarResultado()">Calcular</button>
+    <div id="resultado"></div>
+</body>
+
+</html>

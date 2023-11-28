@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script>
+        // Función para calcular la potencia entera de una base y un exponente
+        function potenciaEntera(base, exponente) {
+            // Usar la función Math.pow para elevar la base al exponente
+            var potencia = Math.pow(base, exponente);
+            return potencia;
+        }
+
+        // Función para mostrar el resultado en el documento HTML
+        function mostrarResultado() {
+            // Obtener los valores de los elementos input con id "base" y "exponente"
+            var base = document.getElementById("base").value;
+            var exponente = document.getElementById("exponente").value;
+            // Validar que los valores sean números
+            if (isNaN(base) || isNaN(exponente)) {
+                alert("Por favor, ingrese números válidos.");
+                return;
+            }
+            // Convertir los valores a números
+            base = Number(base);
+            exponente = Number(exponente);
+            // Calcular la potencia entera usando la función potenciaEntera
+            var potencia = potenciaEntera(base, exponente);
+            // Crear un elemento p para mostrar el resultado
+            var p = document.createElement("p");
+            p.textContent = "El valor de " + base + " elevado a " + exponente + " es: " + potencia;
+            // Obtener el elemento div con id "resultado"
+            var resultado = document.getElementById("resultado");
+            // Limpiar el contenido del elemento div
+            resultado.innerHTML = "";
+            // Agregar el elemento p al elemento div
+            resultado.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de potencia entera</h1>
+    <p>Ingrese los valores de la base y el exponente:</p>
+    <form>
+        <label for="base">Base:</label>
+        <input type="text" id="base">
+        <label for="exponente">Exponente:</label>
+        <input type="text" id="exponente">
+        <br>
+        <button type="button" onclick="mostrarResultado()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>

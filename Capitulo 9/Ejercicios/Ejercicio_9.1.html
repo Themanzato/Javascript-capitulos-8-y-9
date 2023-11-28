@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.1</title>
+    <style type = "text/css">
+        img     {margin-right: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de autoevaluaci&oacute;n</h1>
+    <p>
+        Complete las siguintes oraciones:
+        <ol>
+            <li>Los modulos de programa en JavaScript se llama <u>funciones</u></li>
+            <li>Una funci&oacute;n se invoca mediante el uso de un(a) <u>llamada a funci&oacute;n</u></li>
+            <li>Una variable que se conoce s&oacute;lo dentro de la funci&oacute;n en la que se define se llama <u>variable local</u></li>
+            <li>La intrucci&oacute;n <u>return</u> en una funci&oacute;n invocada puede usarse para pasar el valor de una expresi&oacute;
+                a la funci&oacute;n que hizo la llamada</li>
+            <li>La palabra clave <u>function</u> indica el comienzo de la definici&oacute;n de una funci&oacute;n</li>
+        </ol>
+
+        Para el programa de la siguiente figura, indique el alcance (ya sea alcance global o de funcion) de cada uno de los 3 elementos:
+        <ol>
+            <li>La variable x -----> alcance global</li>
+            <li>La variable y -----> alcance de funcion</li>
+            <li>La funcion cubo -----> alcance global</li>
+            <li>La funcion salida ------> alcance global</li>
+        </ol>
+
+        Complete las siguientes oraciones:
+        <ol>
+            <li>Las funciones por el programador, variables globales y funciones globales de JavaScript son todas partes del objeto <u>Global</u></li>
+            <li>La funcion <u>isNan</u> determina si su argumento es un numero o no</li>
+            <li>La funcion <u>escape</u> recibe un argumento de cadena y devuelve una cadena en la que todos los espacios, puntuacion, 
+                caracteres de acentuacion y cualquier otro caracter que no este en el conjunto ASCII se 
+                condifican en un formato hexadecimal</li>
+            <li>La funcion <u>eval</u> recibe un argumento es la parte del programa en donde puede usarse</li>
+            <li>La funcion <u>unescape</u> recibe una cadena como su argumento y devuelve una cadena en donde se decodifican 
+                todos los caracteres que se codificaron antes con escape</li>
+        </ol>
+
+        Complete las siguientes oraciones:
+        <ol>
+            <li>El <u>alcance</u> de un identificador es la parte del programa en donde puede usarse</li>
+            <li>Las tres formas de devolver el control de una funcion invocada al que la llamo son: <u>return; o return expresion; o encontrar la llave derecha de cierre a una funcion</u></li>
+            <li>La funcion <u>Math.random</u> se utiliza para producir numeros aleatorios</li>
+            <li>La funcion <u>local</u> recibe una cadena como su argumento y devuelve una cadena en donde se decodifican 
+                todos los caracteres que se codificaron antes con escape</li>
+        </ol>
+
+        Localice el error en cada uno de los siguientes segmentos de programa y explique como corregirlo
+        <ol>
+            <li>
+                method g ()<br>
+                {<br>
+                    document.writeln("Dentro del metodo g");<br>
+                }<br>
+
+                <br>R= ERROR: method no es la palabra clave que se utiliza para comenzar la definicion de una funcuion<br>
+                   Correccion: Cambiar method por function
+            </li>
+
+            <li>
+            function suma(x, y)<br>
+                {<br>
+                    var resultado; <br>
+                    resultado = x + y;<br>
+                }<br>
+
+                <br>R= ERROR: se supone que la funcion debe devolver un valor, pero no es asi
+                <br>Correccion: eliminar la variable resultado y colocar la instruccion
+                    <br>return x + y;
+                <br>en la funcion o agregar la siguinte instruccion al final del cuerpo de la funcion:
+                    <br>return resultado;
+            </li>
+
+            <li>
+                function f(a)<br>
+                {<br>
+                    document.writln(a);<br>
+                }<br>
+
+                <br>R= ERROR: el punto y coma despues del parentesis derecho que encierra la lista de parametros
+                <br>Correccion: elimine el punto y coma despues del parentesis derecho de la lista de parametros
+            </li>
+        </ol>
+
+        Escriba un programa de JavaScript completo para pedir al usuario el radio de una esfera y luego llame a la funcion
+        volumenEsfera para calcular y mostrar el volumen de la esfera. Use la instruccion:
+        
+        <br>volumen = (4.0 / 3.0) * Math.PI * Math.pow(radio, 3);
+        
+        <br>para calcular el volumen. El usuario debe introducir el radio en el elemento input de HTML del tipo "number" en 
+        un elemento form. Proporcione el elemento input el valor de is "campoEntrada". Puede usar este id con el metodo
+        getElementaryById del objeto document para obtener el documento a usar en la secuencia de comandos. Para acceder
+        a la cadena en campoEntrada, use la propiedad value como en campoEntrada.value y luego convierta la cadena en 
+        numero, usando parseFloat. Use un elemento input de tipo "button" en el elemento form para que el usuario
+        pueda iniciar el calculo. <br>
+        
+        <br>Respuesta: Ejercicio_9.1-3
+        
+        <p><img id ="Ejercicio" src = "Ejercicio.png" alt="imagen del Ejercicio"></p>
+    </p>
+</body>
+</html>

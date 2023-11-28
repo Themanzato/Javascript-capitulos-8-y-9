@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.7</title>
+    <style type = "text/css">
+        img     {margin-right: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Responda cada una de las siguientes preguntas:</h1>
+    <ol>
+        <li>¿Que significa elegir numero "al azar"?<br>
+            <br>R= Elegir un número al azar significa seleccionar un número de un conjunto de posibles valores, 
+            <br>sin que haya ningún criterio o preferencia que influya en la elección. 
+            <br>Es decir, todos los números tienen la misma probabilidad de ser elegidos. 
+        </li>
+
+        <br><li>¿Porque es util la funcion Math.random para simular juegos de probabilidad?<br>
+            <br>R= La función Math.random es útil para simular juegos de probabilidad porque permite 
+            <br>generar números aleatorios que representan los posibles resultados de un evento. 
+        </li>
+
+        <br><li>¿Porque es a menudo necesario escalar y/o desplazar los valores producidos por Math.random?<br>
+            <br>R= Es a menudo necesario escalar y/o desplazar los valores producidos por Math.random 
+            <br>porque esta función genera números aleatorios entre 0 y 1, que pueden ser muy pequeños o no adecuados para el rango deseado.
+        </li>
+
+        <br><li>¿Porque es la simulacion computarizada de situaciones reales una tecnica util?<br>
+            <br>R= Por las siguientes razones:
+            <br>1.- Replicar o imitar aspectos sustanciales del mundo real de una forma interactiva y segura.
+            <br>2.- Comprender el comportamiento de un sistema real o evaluar nuevas estrategias para su funcionamiento.
+            <br>3.- Aplicar los conocimientos y habilidades adquiridos en un contexto que simule la realidad profesional o cotidiana.
+            <br>4.- Experimentar con diferentes escenarios sin correr riesgos ni incurrir en costos asociados a la implementación de cambios en un sistema real.
+            <br>5.- Identificar los factores, variables y condiciones de proceso que puedan influir en la resolución de problemas o en el desarrollo de nuevos productos.
+        </li>
+
+        <br><li>Escriba instrucciones que asignan enteros aleatorios a la variable n en los siguientes rangos:</li>
+            <ul>
+                <br>1 ≤ n ≤ 2
+                <br>R= int n = (int) (Math.random() * 2) + 1;<br>
+
+                <br>1 ≤ n ≤ 100
+                <br>int n = (int) (Math.random() * 100) + 1;<br>
+
+                <br>0 ≤ n ≤ 9
+                <br>int n = (int) (Math.random() * 10);<br>
+
+                <br>1000 ≤ n ≤ 1112
+                <br>int n = (int) (Math.random() * 113) + 1000;<br>
+
+                <br>-1 ≤ n ≤ 1
+                <br>int n = (int) (Math.random() * 3) - 1;<br>
+
+                <br>-3 ≤ n ≤ 11
+                <br>int n = (int) (Math.random() * 15) - 3;<br>
+            </ul>
+
+        <br><li>Para cada uno de los siguientes conjuntos de enteros, escriba una sola instruccion que imprima un numero al azar del conjunto
+            <ol>
+                <br>2, 4, 6, 8, 10
+                <br>R= System.out.println(2 * ((int) (Math.random() * 5) + 1));<br>
+
+                <br>3, 5, 7, 9, 11
+                <br>R= System.out.println(2 * ((int) (Math.random() * 5) + 1) + 1);<br>
+
+                <br>6, 10, 14, 18, 22
+                <br>R= System.out.println(4 * ((int) (Math.random() * 5) + 1) + 2);
+            </ol>
+        </li>
+
+        <br><li>Escriba una funcion llamada potenciaEntera (base, exponente) que devuelva el valor de baseExponente
+            <br><p><img id ="Ejercicio" src = "Cap_Ejer2.png" alt="imagen del Ejercicio"></p> 
+
+        </li>
+    </ol> 
+</body>
+</html>
